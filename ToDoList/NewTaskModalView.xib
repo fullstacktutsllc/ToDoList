@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Assistant-Bold.ttf">
+            <string>Assistant-Bold</string>
+        </array>
+        <array key="Assistant-SemiBold.ttf">
+            <string>Assistant-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewTaskModalView" customModule="ToDoList" customModuleProvider="target">
+            <connections>
+                <outlet property="captionLabel" destination="kf7-fJ-Mt4" id="PUg-0r-gGh"/>
+                <outlet property="categoryLabel" destination="c82-ER-uxf" id="frY-RM-9je"/>
+                <outlet property="categoryPickerView" destination="oyd-pa-put" id="m38-qM-IqT"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="odq-tF-FI2"/>
+                <outlet property="descriptionTextView" destination="UB5-wA-vNx" id="Svx-Bl-Ge8"/>
+                <outlet property="titleLabel" destination="Cxk-hG-33N" id="hTf-6n-Lkf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="581" height="502"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxk-hG-33N">
+                    <rect key="frame" x="25" y="30" width="91" height="29"/>
+                    <fontDescription key="fontDescription" name="Assistant-Bold" family="Assistant" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9v-hl-gSw">
+                    <rect key="frame" x="511" y="22" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="9DM-0X-aqj"/>
+                        <constraint firstAttribute="height" constant="45" id="9TT-0X-Wtg"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="J4h-PW-63I"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kf7-fJ-Mt4">
+                    <rect key="frame" x="24.999999999999996" y="79" width="46.666666666666657" height="18.333333333333329"/>
+                    <fontDescription key="fontDescription" name="Assistant-SemiBold" family="Assistant" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UB5-wA-vNx">
+                    <rect key="frame" x="25" y="107.33333333333331" width="531" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="2lu-Ui-wps"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c82-ER-uxf">
+                    <rect key="frame" x="24.999999999999996" y="222.33333333333334" width="53.666666666666657" height="18.333333333333343"/>
+                    <fontDescription key="fontDescription" name="Assistant-SemiBold" family="Assistant" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyd-pa-put">
+                    <rect key="frame" x="25" y="250.66666666666663" width="531" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="jkI-Tx-l44"/>
+                    </constraints>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Top-hB-5Pf" customClass="ShadowButton" customModule="ToDoList" customModuleProvider="target">
+                    <rect key="frame" x="25" y="370.66666666666669" width="531" height="40"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4va-Ml-lIp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Assistant-Bold" family="Assistant" pointSize="15"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Submit"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="background">
+                            <color key="value" systemColor="linkColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" name="secondaryLink"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="submitButtonTapped:" destination="-1" eventType="touchUpInside" id="wol-lU-kf4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="oyd-pa-put" firstAttribute="top" secondItem="c82-ER-uxf" secondAttribute="bottom" constant="10" id="3PO-kQ-dZF"/>
+                <constraint firstItem="UB5-wA-vNx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="50V-Zw-UCw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UB5-wA-vNx" secondAttribute="trailing" constant="25" id="8qP-eN-taK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oyd-pa-put" secondAttribute="trailing" constant="25" id="EPC-0s-PQt"/>
+                <constraint firstItem="kf7-fJ-Mt4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="EXc-BY-PFF"/>
+                <constraint firstItem="Top-hB-5Pf" firstAttribute="top" secondItem="oyd-pa-put" secondAttribute="bottom" constant="30" id="MKa-MG-udV"/>
+                <constraint firstItem="c82-ER-uxf" firstAttribute="top" secondItem="UB5-wA-vNx" secondAttribute="bottom" constant="15" id="TTZ-zs-dLU"/>
+                <constraint firstItem="UB5-wA-vNx" firstAttribute="top" secondItem="kf7-fJ-Mt4" secondAttribute="bottom" constant="10" id="Uze-UN-CpD"/>
+                <constraint firstAttribute="trailing" secondItem="o9v-hl-gSw" secondAttribute="trailing" constant="25" id="Xpw-zu-e3t"/>
+                <constraint firstItem="oyd-pa-put" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="dTO-tE-sbS"/>
+                <constraint firstItem="Cxk-hG-33N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="dg8-w7-7Ip"/>
+                <constraint firstItem="kf7-fJ-Mt4" firstAttribute="top" secondItem="Cxk-hG-33N" secondAttribute="bottom" constant="20" id="ebd-yU-xB8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Top-hB-5Pf" secondAttribute="trailing" constant="25" id="fEC-ri-ZZH"/>
+                <constraint firstItem="Cxk-hG-33N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="o5h-Cw-VWW"/>
+                <constraint firstItem="Top-hB-5Pf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="ppo-2I-3Ms"/>
+                <constraint firstItem="o9v-hl-gSw" firstAttribute="centerY" secondItem="Cxk-hG-33N" secondAttribute="centerY" id="sud-Ou-qB4"/>
+                <constraint firstItem="c82-ER-uxf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="ywp-af-z0q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="435.87786259541986" y="-143.66197183098592"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Top-hB-5Pf">
+            <size key="intrinsicContentSize" width="48" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="secondaryLink">
+            <color red="0.11764705882352941" green="0.21568627450980393" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
