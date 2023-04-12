@@ -10,7 +10,7 @@
 		E11ED10129E0552200BC4A73 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11ED10029E0552200BC4A73 /* Colors.xcassets */; };
 		E11ED10329E056E200BC4A73 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11ED10229E056E200BC4A73 /* Extension+UIColor.swift */; };
 		E11ED10529E22F7A00BC4A73 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11ED10429E22F7A00BC4A73 /* SettingsViewController.swift */; };
-		E11ED10729E41E7000BC4A73 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11ED10629E41E7000BC4A73 /* Extension+UIView.swift */; };
+		E11ED10729E41E7000BC4A73 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11ED10629E41E7000BC4A73 /* Animations.swift */; };
 		E11ED10B29E4548A00BC4A73 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11ED10A29E4548A00BC4A73 /* RoundedButton.swift */; };
 		E11ED10D29E4562900BC4A73 /* PillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11ED10C29E4562900BC4A73 /* PillButton.swift */; };
 		E11ED10F29E456F100BC4A73 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11ED10E29E456F100BC4A73 /* ShadowButton.swift */; };
@@ -37,7 +37,7 @@
 		E11ED10029E0552200BC4A73 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E11ED10229E056E200BC4A73 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		E11ED10429E22F7A00BC4A73 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		E11ED10629E41E7000BC4A73 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		E11ED10629E41E7000BC4A73 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		E11ED10A29E4548A00BC4A73 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		E11ED10C29E4562900BC4A73 /* PillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButton.swift; sourceTree = "<group>"; };
 		E11ED10E29E456F100BC4A73 /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
@@ -83,6 +83,46 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		E12F9F4229E77506008493E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1291450295FB0660010E3AE /* TaskModel.swift */,
+				E1D34EA6295BA864005AE0BF /* CategoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E12F9F4329E77531008493E8 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				E11ED10029E0552200BC4A73 /* Colors.xcassets */,
+				E11ED10229E056E200BC4A73 /* Extension+UIColor.swift */,
+				E11ED10629E41E7000BC4A73 /* Animations.swift */,
+				E1BDF04229DC1B0A007E60BE /* Typography.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		E12F9F4429E775F5008493E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1FD1CF02947AF4D00D1FF22 /* TaskTableViewCell.swift */,
+				E1F52B542955F01B0018C38C /* NewTaskModalView.xib */,
+				E1D34EA4295BA365005AE0BF /* NewTaskModalView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E12F9F4529E77624008493E8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E11ED10429E22F7A00BC4A73 /* SettingsViewController.swift */,
+				E1FEDC76294E8DBD009451D2 /* NewTaskViewController.swift */,
+				E19676DE293F9CD70014F964 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		E19676CE293F9CD70014F964 = {
 			isa = PBXGroup;
 			children = (
@@ -102,23 +142,15 @@
 		E19676D9293F9CD70014F964 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				E12F9F4529E77624008493E8 /* ViewControllers */,
+				E12F9F4429E775F5008493E8 /* Views */,
+				E12F9F4329E77531008493E8 /* Design */,
+				E12F9F4229E77506008493E8 /* Models */,
 				E11ED11029E4595900BC4A73 /* Components */,
 				E1BDF04429DC1B3C007E60BE /* Resources */,
 				E19676DA293F9CD70014F964 /* AppDelegate.swift */,
 				E19676DC293F9CD70014F964 /* SceneDelegate.swift */,
-				E1D34EA6295BA864005AE0BF /* CategoryModel.swift */,
-				E1291450295FB0660010E3AE /* TaskModel.swift */,
-				E19676DE293F9CD70014F964 /* ViewController.swift */,
-				E1FD1CF02947AF4D00D1FF22 /* TaskTableViewCell.swift */,
-				E1FEDC76294E8DBD009451D2 /* NewTaskViewController.swift */,
-				E1BDF04229DC1B0A007E60BE /* Typography.swift */,
-				E11ED10429E22F7A00BC4A73 /* SettingsViewController.swift */,
-				E1F52B542955F01B0018C38C /* NewTaskModalView.xib */,
-				E1D34EA4295BA365005AE0BF /* NewTaskModalView.swift */,
 				E19676E0293F9CD70014F964 /* Main.storyboard */,
-				E11ED10229E056E200BC4A73 /* Extension+UIColor.swift */,
-				E11ED10629E41E7000BC4A73 /* Extension+UIView.swift */,
-				E11ED10029E0552200BC4A73 /* Colors.xcassets */,
 				E19676E3293F9CD90014F964 /* Assets.xcassets */,
 				E19676E5293F9CD90014F964 /* LaunchScreen.storyboard */,
 				E19676E8293F9CD90014F964 /* Info.plist */,
@@ -225,7 +257,7 @@
 				E1D34EA5295BA365005AE0BF /* NewTaskModalView.swift in Sources */,
 				E11ED10F29E456F100BC4A73 /* ShadowButton.swift in Sources */,
 				E11ED10329E056E200BC4A73 /* Extension+UIColor.swift in Sources */,
-				E11ED10729E41E7000BC4A73 /* Extension+UIView.swift in Sources */,
+				E11ED10729E41E7000BC4A73 /* Animations.swift in Sources */,
 				E11ED10529E22F7A00BC4A73 /* SettingsViewController.swift in Sources */,
 				E1FD1CF12947AF4D00D1FF22 /* TaskTableViewCell.swift in Sources */,
 				E1FEDC77294E8DBD009451D2 /* NewTaskViewController.swift in Sources */,
