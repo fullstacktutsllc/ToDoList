@@ -32,7 +32,17 @@ class ShadowButton: UIButton {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupView()
+    }
+    
     override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        setupView()
+    }
+    
+    private func setupView() {
         titleLabel?.font = UIFont.style(.buttonTitle)
         backgroundColor = background
         layer.shadowColor = shadowColor.cgColor
