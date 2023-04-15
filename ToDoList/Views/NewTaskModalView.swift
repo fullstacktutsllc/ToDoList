@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// A modal popup that allows a user to enter details of a task. This popup appears in the NewTaskViewController.
 class NewTaskModalView: UIView {
 
     @IBOutlet private weak var descriptionTextView: UITextView!
@@ -23,6 +24,12 @@ class NewTaskModalView: UIView {
         set { descriptionTextView.text = newValue }
     }
     
+    /**
+        Creates the NewTaskModalView
+        - Parameters:
+            - frame: The frame of the NewTaskModalView
+            - task: Provide the task only if you are editing the task
+     */
     init(frame: CGRect, task: Task?) {
         super.init(frame: frame)
         self.task = task
@@ -84,6 +91,7 @@ class NewTaskModalView: UIView {
 //    }
     
     @IBAction func submitButtonTapped(_ sender: Any) {
+        //Validate user input before allowing a submission
         guard let caption = descriptionTextView.text,
               descriptionTextView.textColor != UIColor.placeholderText,
               caption.count >= 4 && caption.count <= 50 else {
@@ -112,6 +120,7 @@ class NewTaskModalView: UIView {
     
 }
 
+//MARK: - Conformance to UITextViewDelegate
 extension NewTaskModalView: UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -130,6 +139,7 @@ extension NewTaskModalView: UITextViewDelegate {
     
 }
 
+//MARK: - Conformance to UIPickerViewDataSource
 extension NewTaskModalView: UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -142,6 +152,7 @@ extension NewTaskModalView: UIPickerViewDataSource {
     
 }
 
+//MARK: - Conformance to UIPickerViewDelegate
 extension NewTaskModalView: UIPickerViewDelegate {
     
 //    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

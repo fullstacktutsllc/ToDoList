@@ -7,11 +7,15 @@
 
 import UIKit
 
+/**
+    TaskTableViewCellDelegate links the TaskTableViewCell and the HomeViewController.
+ */
 protocol TaskTableViewCellDelegate: AnyObject {
     func editTask(id: String)
     func markTask(id: String, complete: Bool)
 }
 
+/// The cell responsible for displaying tasks in the tableview in the HomeViewController
 class TaskTableViewCell: UITableViewCell {
     
     static let identifier = "TaskTableViewCell"
@@ -41,6 +45,12 @@ class TaskTableViewCell: UITableViewCell {
         containerView.clipsToBounds = true
     }
     
+    /**
+        Every cell is configured here.
+        - Parameters:
+            - withTask task: The task to display
+            - delegate: A reference to the TaskTableViewCellDelegate used to communicate the user wishes to edit the task
+     */
     func configure(withTask task: Task, delegate: TaskTableViewCellDelegate?) {
         stripView.backgroundColor = task.category.color
         categoryContainerView.backgroundColor = task.category.secondaryColor

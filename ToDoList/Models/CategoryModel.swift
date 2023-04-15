@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
+/// Represents a task's category.
 enum Category: String, CaseIterable {
     case work = "Work", study = "Study", excercise = "Excercise"
-    
+    /// Convenient variable to get category color
     var color: UIColor {
         switch self {
         case .work:
@@ -21,7 +22,7 @@ enum Category: String, CaseIterable {
             return UIColor.study
         }
     }
-    
+    /// Secondary color is used to get the secondary  color from the category color
     var secondaryColor: UIColor {
         switch self {
         case .work:

@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// A useful component to create a button with rounded corners
 class RoundedButton: UIButton {
 
     override func awakeFromNib() {

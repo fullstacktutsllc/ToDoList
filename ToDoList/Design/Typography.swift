@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+
+//Custom font is handled here
+
+//These provide two ways of getting the font type
 extension UIFont {
     
     convenience init(type: FontType, size: FontSize) {
@@ -20,7 +24,7 @@ extension UIFont {
     
 }
 
-
+//Custom font types are listed here. Fonts can be found in Resources folder.
 enum FontType: String {
     
     case assistantRegular = "Assistant-Regular"
@@ -30,6 +34,7 @@ enum FontType: String {
     
 }
 
+// Used to get string name of a font from FontType enumeration.
 extension FontType {
     
     var name: String {
@@ -38,12 +43,14 @@ extension FontType {
     
 }
 
+// Used to provide different ways of setting font size.
 enum FontSize {
     case custom(Double)
     case theme(FontStyle)
     
 }
 
+// Helper variable to conveniently get font size
 extension FontSize {
     var value: Double {
         switch self {
@@ -55,6 +62,7 @@ extension FontSize {
     }
 }
 
+// Predefined custom font styles named according to function.
 enum FontStyle {
     
     case h1
@@ -68,7 +76,7 @@ enum FontStyle {
 }
 
 extension FontStyle {
-    
+    // Defines size of predefined font styles
     var size: Double {
         switch self {
         case .h1:
@@ -89,7 +97,7 @@ extension FontStyle {
             return 15
         }
     }
-    
+    // Defines font description of predefined font for accessibility
     private var fontDescription: FontDescription {
         switch self {
         case .h1:
@@ -110,7 +118,7 @@ extension FontStyle {
             return FontDescription(font: .assistantBold, size: .theme(.buttonTitle), style: .body)
         }
     }
-    
+    // Creates a predefined font with a dynamic font fallback
     var font: UIFont {
         guard let font = UIFont(name: fontDescription.font.name, size: fontDescription.size.value) else {
             return UIFont.preferredFont(forTextStyle: fontDescription.style)
@@ -120,7 +128,7 @@ extension FontStyle {
     }
     
 }
-
+// The properties needed to create a font description
 private struct FontDescription {
     let font: FontType
     let size: FontSize

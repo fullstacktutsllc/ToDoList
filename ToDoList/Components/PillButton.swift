@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// A useful component to create a pill shaped button
 class PillButton: UIButton {
 
     override func awakeFromNib() {

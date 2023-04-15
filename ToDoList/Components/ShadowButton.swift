@@ -7,7 +7,7 @@
 
 import UIKit
 
-
+/// A useful component to create a button with a 3d like button
 @IBDesignable
 class ShadowButton: UIButton {
     
