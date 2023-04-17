@@ -7,9 +7,10 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 /// Represents a task's category.
-enum Category: String, CaseIterable {
+enum Category: String, CaseIterable, PersistableEnum {
     case work = "Work", study = "Study", excercise = "Excercise"
     /// Convenient variable to get category color
     var color: UIColor {
